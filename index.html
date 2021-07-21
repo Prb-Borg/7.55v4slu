@@ -1,6 +1,6 @@
 <html manifest="offlinexmb.cache">
 <head>
-<title>Prb 7.55 Exploit Menu V4 SL Update 3</title>
+<title>Prb 7.55 Exploit Menu V4 SL Update 5</title>
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%"};
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";localStorage.isPrbCached=true;},1000);setTimeout(function(){window.msgs.innerHTML="Turn Off the Internet & Reopen to Run the Webkit!!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
@@ -54,9 +54,10 @@ mymenu.style.display="block";
 <div style="width:100%;font-size:20px;color:white">
 PS4 Firmware <span id="PS4fw"></span></div>
      <br><div style='font-size:20px;color:red'>EXPLOIT</div>
-	 <button  onMouseOver="msgs.innerHTML='Exploit - By Sleirsgoevy Latest Kernel Exploit 3rd June.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_exploit1(); return false">New Exploit</button>&nbsp; OR &nbsp;
+	 <button  onMouseOver="msgs.innerHTML='Exploit - By Sleirsgoevy Latest Kernel Exploit 20th July.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_exploit0(); return false">New Exploit</button>&nbsp; OR &nbsp;
+	 <button  onMouseOver="msgs.innerHTML='Exploit - By Sleirsgoevy Kernel Exploit 3rd June.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_exploit1(); return false">Exploit</button>&nbsp; OR &nbsp;
      <button  onMouseOver="msgs.innerHTML='Exploit - By Sleirsgoevy Kernel Exploit 27th May.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_exploit2(); return false">Exploit</button>&nbsp; OR &nbsp;
-     <button  onMouseOver="msgs.innerHTML='Exploit - By Sleirsgoevy Kernel Exploit 20th May.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_exploit3(); return false">Exploit Old</button>
+     <button  onMouseOver="msgs.innerHTML='Exploit - By Sleirsgoevy Kernel Exploit 20th May.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_exploit3(); return false">Exploit</button>
      <br><div style='font-size:20px;color:yellow'>HEN / MIRA</div>
      <button onMouseOver="msgs.innerHTML='GoldHen - v1.0 By SiSTRo / Joonie86.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_goldhen(); return false">GoldHEN v1.0</button>
      <button onMouseOver="msgs.innerHTML='GoldHen - v1.1 By SiSTRo / Joonie86.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_goldhenb(); return false">GoldHEN v1.1</button>
@@ -121,9 +122,7 @@ PS4 Firmware <span id="PS4fw"></span></div>
       <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 70c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_fancontrol70(); return false">fan 70c</button>
 	  <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 75c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_fancontrol75(); return false">fan 75c</button>
       <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 80c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_fancontrol80(); return false">fan 80c</button>
-      <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 85c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_fancontrol85(); return false">fan 85c</button>
-      <button onMouseOver="msgs.innerHTML='Fan Control Set Temp 90c. Set Fan Threshold The PS4 default temp is 79°C.'"; onmouseout="msgs.innerHTML='Prb 7.55 Exploit Menu V4 Super Lite Update'" onclick="load_fancontrol90(); return false">fan 90c</button>
-	  <div style="text-align:center;position:fixed;left:10px;bottom:10px;width:100%;font-size:20px;color:white">Massive Thanks - Leeful - KiiWii - Sleirsgoevy - theflow - Al Azif - Joonie86 - And Many More</div>
+      <div style="text-align:center;position:fixed;left:10px;bottom:10px;width:100%;font-size:20px;color:white">Massive Thanks - Leeful - KiiWii - Sleirsgoevy - theflow - Al Azif - Joonie86 - And Many More</div>
      
 	</div>
 
@@ -138,6 +137,12 @@ if (localStorage.passcount == null) localStorage.passcount=0;
 window.passCounter.innerHTML=localStorage.passcount;
 if (localStorage.failcount == null) localStorage.failcount=0;
 window.failCounter.innerHTML=localStorage.failcount;
+
+function load_exploit0(){
+msgs.innerHTML="Loading Exploit Please Wait ...";
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("common/exp_jailbreak0.js",function(){setTimeout(jailbreak,000);});}loadScript();
+}
 
 function load_exploit1(){
 msgs.innerHTML="Loading Exploit Please Wait ...";
@@ -544,20 +549,6 @@ function load_fancontrol80(){
 msgs.innerHTML="Loading Fan Control 80c ...";
 LoadedMSG="Fan Control 80c Loaded<br>Use The PS Button When Exiting The Menu";
 PLfile = "payload/fan_control/pl_fancontrol80.bin";
-loadScript2();
-}
-
-function load_fancontrol85(){
-msgs.innerHTML="Loading Fan Control 85c ...";
-LoadedMSG="Fan Control 85c Loaded<br>Use The PS Button When Exiting The Menu";
-PLfile = "payload/fan_control/pl_fancontrol85.bin";
-loadScript2();
-}
-
-function load_fancontrol90(){
-msgs.innerHTML="Loading Fan Control 90c ...";
-LoadedMSG="Fan Control 90c Loaded<br>Use The PS Button When Exiting The Menu";
-PLfile = "payload/fan_control/pl_fancontrol90.bin";
 loadScript2();
 }
 
